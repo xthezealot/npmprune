@@ -59,7 +59,6 @@ PATTERNS="
 	examples
 	grunt*
 	gulp*
-	images
 	jenkins*
 	jest*
 	jsconfig.json
@@ -70,10 +69,8 @@ PATTERNS="
 	powered-test
 	prettier.*
 	test
-	test.*
 	tests
 	tsconfig.json
-	website
 "
 
 PROD_PATTERNS="
