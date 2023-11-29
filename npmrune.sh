@@ -42,7 +42,6 @@ PATTERNS="
 	*rollup*
 	*stylelint*
 	*travis*
-	*tsconfig*
 	*tslint*
 	*vscode*
 	*wallaby*
@@ -61,6 +60,7 @@ PATTERNS="
 	images
 	jenkins*
 	jest*
+	jsconfig.json
 	karma*
 	license
 	license.*
@@ -70,6 +70,7 @@ PATTERNS="
 	test
 	test.*
 	tests
+	tsconfig.json
 	website
 "
 

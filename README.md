@@ -16,3 +16,9 @@ wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmrune.s
 ```sh
 wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmrune.sh | sh -- -p
 ```
+
+**In a Dockerfile:**
+
+```dockerfile
+RUN wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmrune.sh | sh -s -- -p
+```
