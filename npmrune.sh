@@ -20,7 +20,10 @@ PATTERNS="
 	.npm*
 	.nyc*
 	.prettier*
-	.tern*
+	.tern-project
+	.yarn-integrity
+	.yarn-metadata.json
+	.yarnclean
 	.yo-*
 	*.coffee
 	*.env*
@@ -45,7 +48,6 @@ PATTERNS="
 	*tslint*
 	*vscode*
 	*wallaby*
-	*yarn*
 	authors
 	changelog
 	changes
