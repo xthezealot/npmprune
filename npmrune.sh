@@ -62,8 +62,8 @@ PATTERNS="
 	jenkins*
 	jest*
 	karma*
-	licence
-	licence.*
+	license
+	license.*
 	makefile
 	powered-test
 	prettier.*
