@@ -2,7 +2,7 @@
 
 TARGET_DIR=node_modules
 
-if [ ! -d "$TARGET_DIR" ]; then
+if [ ! -d $TARGET_DIR ]; then
 	echo "$TARGET_DIR" does not exist
 	exit 1
 fi
@@ -82,10 +82,34 @@ if [ "$1" = "-p" ]; then
 	PATTERNS="$PATTERNS $PROD_PATTERNS"
 fi
 
-echo "$TARGET_DIR size before: $(du -sh "$TARGET_DIR" | awk '{print $1}')"
+if [ ! "$1" = "-p" ]; then
+	echo "$TARGET_DIR size before: $(du -sh $TARGET_DIR | awk '{print $1}')"
+fi
 
-for pattern in $PATTERNS; do
-	find "$TARGET_DIR" -iname "$pattern" -exec rm -rf {} +
-done
+find_cmd="find $TARGET_DIR"
+first_pattern=true
+printf '%s\n' "$PATTERNS" | (
+	while IFS= read -r line; do
+		line=$(echo "$line" | xargs)
 
-echo "$TARGET_DIR size after:  $(du -sh "$TARGET_DIR" | awk '{print $1}')"
+		# skip empty lines
+		if [ -z "$line" ]; then
+			continue
+		fi
+
+		# add -o if not the first pattern
+		if [ "$first_pattern" = false ]; then
+			find_cmd="$find_cmd -o"
+		else
+			first_pattern=false
+		fi
+
+		find_cmd="$find_cmd -name '$line'"
+	done
+
+	eval "$find_cmd"
+)
+
+if [ ! "$1" = "-p" ]; then
+	echo "$TARGET_DIR size after:  $(du -sh $TARGET_DIR | awk '{print $1}')"
+fi
