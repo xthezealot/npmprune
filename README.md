@@ -6,6 +6,14 @@ It helps in reducing the overall size of `node_modules`, optimizing storage spac
 
 It includes a `-p` flag to perform a more aggressive cleanup, tailored for production builds such as in Docker containers.
 
+1. [Installation](#installation)
+2. [Usage](#usage)
+   - [Default](#default)
+   - [Production Mode Usage](#production-mode)
+3. [Integration in deployment scripts](#integration-in-deployment-scripts)
+4. [Integration in a Dockerfile](#integration-in-a-dockerfile)
+5. [Compatibility](#compatibility)
+
 ## Installation
 
 Make `npmprune.sh` available as a command:
