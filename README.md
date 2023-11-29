@@ -1,24 +1,51 @@
 # NPMprune
 
-`npmprune.sh` is a small script to prune unnecessary files from `./node_modules`, such as Markdown.
+`npmprune.sh` is an lightweight script designed to clean up your `node_modules` directory by removing unnecessary files like doc, Markdown, and config files.
 
-By default, it doesn't remove TypeScript definitions.  
-On production, use the `-p` to also remove them.
+It helps in reducing the overall size of `node_modules`, optimizing storage space, and speeding up deployments, especially in containerized environments.
 
-**Install as a command:**
+It includes a `-p` flag to perform a more aggressive cleanup, tailored for production builds such as in Docker containers.
 
-```dockerfile
+## Installation
+
+Make `npmprune.sh` available as a command:
+
+```sh
 wget -O npmprune https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh && chmod +x npmprune
 ```
 
-**On deployment:**
+## Usage
+
+### Default
+
+For a standard cleanup:
+
+```sh
+npmprune
+```
+
+### Production mode
+
+For production environments, such as in a Docker container, use the `-p` flag to perform a more extensive cleanup:
+
+```sh
+npmprune -p
+```
+
+## Integration in deployment scripts
 
 ```sh
 wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh -- -p
 ```
 
-**In a Dockerfile:**
+## Integration in a Dockerfile
+
+Incorporate NPMprune in your Dockerfile for optimized container builds:
 
 ```dockerfile
 RUN wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh -s -- -p
 ```
+
+# Compatibility
+
+NPMprune is compatible with both Linux and macOS environments, even with the most basic Alpine Linux setup.
