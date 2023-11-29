@@ -6,17 +6,15 @@ It helps in reducing the overall size of `node_modules`, optimizing storage spac
 
 It includes a `-p` flag to perform a more aggressive cleanup, tailored for production builds such as in Docker containers.
 
-1. [Installation](#installation)
+1. [Install](#install)
 2. [Usage](#usage)
-   - [Default](#default)
-   - [Production Mode Usage](#production-mode)
-3. [Integration in deployment scripts](#integration-in-deployment-scripts)
-4. [Integration in a Dockerfile](#integration-in-a-dockerfile)
-5. [Compatibility](#compatibility)
+   - [Production mode](#production-mode)
+3. [Integration](#integration)
+   - [In deployment scripts](#in-deployment-scripts)
+   - [In a Dockerfile](#in-a-dockerfile)
+4. [Compatibility](#compatibility)
 
-## Installation
-
-Make `npmprune.sh` available as a command:
+## Install
 
 ```sh
 wget -O npmprune https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh && chmod +x npmprune
@@ -24,31 +22,27 @@ wget -O npmprune https://raw.githubusercontent.com/xthezealot/npmprune/master/np
 
 ## Usage
 
-### Default
-
-For a standard cleanup:
-
 ```sh
 npmprune
 ```
 
 ### Production mode
 
-For production environments, such as in a Docker container, use the `-p` flag to perform a more extensive cleanup:
+For production environments, use the `-p` flag to perform a more extensive cleanup:
 
 ```sh
 npmprune -p
 ```
 
-## Integration in deployment scripts
+## Integration
+
+### In deployment scripts
 
 ```sh
 wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh -- -p
 ```
 
-## Integration in a Dockerfile
-
-Incorporate NPMprune in your Dockerfile for optimized container builds:
+### In a Dockerfile
 
 ```dockerfile
 RUN wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh -s -- -p
