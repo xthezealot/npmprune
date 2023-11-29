@@ -8,11 +8,11 @@ On production, use the `-p` to also remove them.
 **During development:**
 
 ```sh
-wget -qO- https://github.com/xthezealot/npmprune/raw/master/npmprune.sh | sh
+wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmrune.sh | sh
 ```
 
 **On deployment:**
 
 ```sh
-wget -qO- https://github.com/xthezealot/npmprune/raw/master/npmprune.sh | sh -- -p
+wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmrune.sh | sh -- -p
 ```

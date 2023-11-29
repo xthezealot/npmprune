@@ -83,10 +83,10 @@ if [ "$1" = "-p" ]; then
 	PATTERNS="$PATTERNS $PROD_PATTERNS"
 fi
 
-echo "$TARGET size before: $(du -sh "$TARGET_DIR" | awk '{print $1}')"
+echo "$TARGET_DIR size before: $(du -sh "$TARGET_DIR" | awk '{print $1}')"
 
 for pattern in $PATTERNS; do
 	find "$TARGET_DIR" -iname "$pattern" -exec rm -rf {} +
 done
 
-echo "$TARGET size after:  $(du -sh "$TARGET_DIR" | awk '{print $1}')"
+echo "$TARGET_DIR size after:  $(du -sh "$TARGET_DIR" | awk '{print $1}')"
