@@ -77,7 +77,6 @@ PATTERNS="
 PROD_PATTERNS="
 	*.map
 	*.ts
-	types
 "
 
 if [ "$1" = "-p" ]; then
