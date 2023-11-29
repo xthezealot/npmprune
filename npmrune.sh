@@ -63,7 +63,7 @@ PATTERNS="
 	jsconfig.json
 	karma*
 	license
-	license.*
+	license.txt
 	makefile
 	powered-test
 	prettier.*
