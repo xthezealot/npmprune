@@ -15,6 +15,7 @@ PATTERNS="
 	.documentup*
 	.ds_store
 	.editorconfig
+	.env*
 	.git*
 	.idea
 	.lint*
@@ -27,7 +28,6 @@ PATTERNS="
 	.yarnclean
 	.yo-*
 	*.coffee
-	*.env*
 	*.flow*
 	*.jst
 	*.markdown
