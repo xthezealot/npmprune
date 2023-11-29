@@ -9,6 +9,7 @@ fi
 
 PATTERNS="
 	__tests__
+	_config.yml
 	.babel*
 	.circle*
 	.documentup*
@@ -35,14 +36,11 @@ PATTERNS="
 	*.swp
 	*.tgz
 	*appveyor*
-	*config.yml
 	*coveralls*
 	*eslint*
-	*example*
 	*htmllint*
 	*jshint*
 	*readme*
-	*rollup*
 	*stylelint*
 	*travis*
 	*tslint*
@@ -57,13 +55,15 @@ PATTERNS="
 	coverage
 	doc
 	docs
+	example
+	examples
 	grunt*
 	gulp*
 	images
 	jenkins*
 	jest*
 	jsconfig.json
-	karma*
+	karma.conf*
 	license
 	license.txt
 	makefile
