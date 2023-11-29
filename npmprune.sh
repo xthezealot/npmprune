@@ -10,6 +10,7 @@ fi
 PATTERNS="
 	__tests__
 	_config.yml
+	.*ignore
 	.babel*
 	.circle*
 	.documentup*
