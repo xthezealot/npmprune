@@ -64,9 +64,12 @@ PATTERNS="
 	jest*
 	jsconfig.json
 	karma.conf*
+	licence
+	licence.txt
 	license
 	license.txt
 	makefile
+	npm-debug.log
 	powered-test
 	prettier.*
 	test
