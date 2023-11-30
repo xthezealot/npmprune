@@ -90,7 +90,7 @@ if [ ! "$NODE_ENV" = "production" ]; then
 	echo "$TARGET_DIR size before: $(du -sh $TARGET_DIR | awk '{print $1}')"
 fi
 
-find_cmd="find $TARGET_DIR"
+find_cmd="find $TARGET_DIR \("
 first_pattern=true
 printf '%s\n' "$PATTERNS" | (
 	while IFS= read -r line; do
@@ -108,10 +108,10 @@ printf '%s\n' "$PATTERNS" | (
 			first_pattern=false
 		fi
 
-		find_cmd="$find_cmd -name '$line'"
+		find_cmd="$find_cmd -iname '$line'"
 	done
 
-	eval "$find_cmd"
+	eval "$find_cmd \) -exec rm -rf {} +"
 )
 
 if [ ! "$NODE_ENV" = "production" ]; then
