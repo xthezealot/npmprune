@@ -82,11 +82,11 @@ PROD_PATTERNS="
 	*.ts
 "
 
-if [ "$1" = "-p" ]; then
+if [ "$NODE_ENV" = "production" ]; then
 	PATTERNS="$PATTERNS $PROD_PATTERNS"
 fi
 
-if [ ! "$1" = "-p" ]; then
+if [ ! "$NODE_ENV" = "production" ]; then
 	echo "$TARGET_DIR size before: $(du -sh $TARGET_DIR | awk '{print $1}')"
 fi
 
@@ -114,6 +114,6 @@ printf '%s\n' "$PATTERNS" | (
 	eval "$find_cmd"
 )
 
-if [ ! "$1" = "-p" ]; then
+if [ ! "$NODE_ENV" = "production" ]; then
 	echo "$TARGET_DIR size after:  $(du -sh $TARGET_DIR | awk '{print $1}')"
 fi
