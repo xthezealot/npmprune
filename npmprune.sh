@@ -61,7 +61,7 @@ PATTERNS="
 	grunt*
 	gulp*
 	jenkins*
-	jest*
+	jest.config.*
 	jsconfig.json
 	karma.conf*
 	licence
