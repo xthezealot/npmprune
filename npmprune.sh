@@ -79,6 +79,7 @@ PATTERNS="
 
 PROD_PATTERNS="
 	*.map
+	*.mts
 	*.ts
 "
 
