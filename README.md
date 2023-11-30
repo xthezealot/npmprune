@@ -27,7 +27,7 @@ npmprune
 
 ### Production mode
 
-If the `NODE_ENV` environment variable is set to `production`, NPMprune performs a more extensive cleanup by removing type definitions.
+If the `NODE_ENV` environment variable is set to `production`, NPMprune performs a more extensive cleanup by also removing type definitions.
 
 ## Integration
 
