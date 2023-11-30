@@ -1,3 +1,5 @@
+<p align="center"><img src="https://i.imgur.com/kyxhcwg.png" width="128" height="128"></p>
+
 # NPMprune
 
 `npmprune.sh` is an lightweight script designed to clean up your `node_modules` directory by removing unnecessary files like Markdown, doc and config files.
