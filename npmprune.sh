@@ -47,12 +47,15 @@ PATTERNS="
 	*tslint*
 	*vscode*
 	*wallaby*
-	authors
-	changelog
+	authors*
+	AUTHORS*
+	changelog*
+	CHANGELOG*
 	changes
 	circle.yml
 	component.json
-	contributors
+	contributors*
+	CONTRIBUTORS*
 	coverage
 	doc
 	docs
@@ -64,10 +67,10 @@ PATTERNS="
 	jest.config.*
 	jsconfig.json
 	karma.conf*
-	licence
-	licence.txt
-	license
-	license.txt
+	licence*
+	license*
+	LICENSE*
+	LICENCE*
 	makefile
 	npm-debug.log
 	powered-test
@@ -75,6 +78,18 @@ PATTERNS="
 	test
 	tests
 	tsconfig.json
+	.nyc_output
+	.gitattributes
+	.flowconfig
+	.yo-rc.json
+	images
+	assets
+	.github
+	.circleci
+	website
+	powered-test
+	demo
+	demos
 "
 
 PROD_PATTERNS="
