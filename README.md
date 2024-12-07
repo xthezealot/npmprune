@@ -1,4 +1,4 @@
-<p align="center"><img src="https://i.imgur.com/kyxhcwg.png" width="128" height="128"></p>
+<p align="center"><img src="https://i.imgur.com/joBUSud.jpg" width="256" height="192"></p>
 
 # NPMprune
 
