@@ -83,6 +83,11 @@ PROD_PATTERNS="
 	*.ts
 "
 
+# Add patterns from command-line arguments.
+for arg in "$@"; do
+    PATTERNS="$PATTERNS $arg"
+done
+
 if [ "$NODE_ENV" = "production" ]; then
 	PATTERNS="$PATTERNS $PROD_PATTERNS"
 fi
