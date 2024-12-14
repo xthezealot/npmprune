@@ -31,18 +31,34 @@ npmprune
 
 If the `NODE_ENV` environment variable is set to `production`, NPMprune performs a more extensive cleanup by also removing type definitions.
 
+### Additional Patterns
+
+You can provide additional patterns by passing them as arguments:
+
+```sh
+npmprune "*.log" "*.bak"
+```
+
 ## Integration
 
 ### In deployment scripts
 
 ```sh
+# Basic usage:
 wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh
+
+# With additional patterns:
+wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh -s -- "*.log" "*.bak"
 ```
 
 ### In a Dockerfile
 
 ```dockerfile
+# Basic usage:
 RUN wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh
+
+# With additional patterns:
+RUN wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh -s -- "*.log" "*.bak"
 ```
 
 # Compatibility
