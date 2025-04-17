@@ -1,6 +1,6 @@
 <p align="center"><img src="https://i.imgur.com/joBUSud.jpg" width="256" height="192"></p>
 
-# NPMprune
+# npmprune
 
 `npmprune.sh` is an lightweight script designed to clean up your `node_modules` directory by removing unnecessary files like Markdown, doc and config files.
 
@@ -61,6 +61,6 @@ RUN wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmpr
 RUN wget -qO- https://raw.githubusercontent.com/xthezealot/npmprune/master/npmprune.sh | sh -s -- "*.log" "*.bak"
 ```
 
-# Compatibility
+## Compatibility
 
-NPMprune is compatible with both Linux and macOS environments, even with the most basic Alpine Linux setup.
+npmprune is compatible with both Linux and macOS environments, even with the most basic Alpine Linux setup.
